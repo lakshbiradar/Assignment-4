@@ -1,0 +1,56 @@
+body
+{
+font-family: sans-serif;
+display: grid;
+width: 960px;
+grid-gap:20px;
+margin: 15px auto;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: 80px 180px  480px 45px;
+grid-template-areas: 
+"logo . nav nav"
+"header header header header" 
+"main main main main"
+"footer footer footer footer";
+}
+
+div,nav,footer
+{
+ background-color: silver;
+}
+
+header
+{
+    grid-area: header;
+}
+
+nav
+{
+ grid-area: nav;
+ align-self: center;
+}
+nav ul
+{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    display:grid;
+    height:40px;
+    grid-template: auto/repeat(4,1fr);
+    justify-items: center;
+    align-content:center; 
+}
+
+main
+{
+    grid-area: main;
+    display: grid;
+    grid-gap:15px;
+    grid-template: repeat(3,150px)/repeat(3, 1fr);
+
+}
+footer{
+    grid-area: footer;
+    align-content: cen;
+    text-align: center;
+}
